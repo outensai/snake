@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .map{
+            width: 800px;
+            height:600px;
+            background: #ddd;
+            background-image: url("lawn2.png");
+            background-size: 5% 5%;
+            position: relative;
+            /*border-radius:360px;*/
+        }
+        .score{
+            width: 80px;
+            height: 20px;
+            position: absolute;
+            top:10px;
+            right: 20px;
+            opacity: 0.5;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="map">
+    <div class="score" id="score"></div>
+</div>
+<script src="food.js"></script>
+<script src="snake.js"></script>
+<script src="Game.js"></script>
+<script>
+var game=new Game(document.querySelector(".map"));
+game.init();
+</script>
+</body>
+</html>
